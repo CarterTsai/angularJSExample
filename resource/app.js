@@ -5,7 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
+  , article = require('./routes/article')
   , http = require('http')
   , path = require('path');
 
@@ -23,12 +23,17 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
-if ('development' == app.get('env')) {
+console.log('Development environment: ' + app.get('env'));
+if ('development' === app.get('env')) {
   app.use(express.errorHandler());
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+// article
+app.post('/article'   , article.create);
+app.get('/article/:id'    , article.read);
+app.put('/article'    , article.update);
+app.delete('/article/:id' , article.delete);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
