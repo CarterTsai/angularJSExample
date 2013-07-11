@@ -10,12 +10,12 @@ function ResCtrl($scope, $resource) {
         create: {method:'POST'  },
    });
 
-   Article.read({articleId:2}, function(u, getRespinseHeaders) {
-        console.log(u);
+  var x = Article.read({articleId:2}, function(u, getRespinseHeaders) {
+        $scope.Hello += u.id;
    });
 
    Article.create({articleId:2}, function(u, getRespinseHeaders) {
-        console.log(u);
+        console.log(u.status);
    });
    
    Article.delete({articleId:2}, function(u, getRespinseHeaders) {
