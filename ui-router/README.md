@@ -10,14 +10,14 @@ References:
 以下是Router基本的設定
 
 
-`
+```
 myApp.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-    .state('index', {
-      url: "", // url空白的話就是根目錄就像是執行http://localhost一樣
-      templateUrl: "partials/state1.html"
-    });
-`
+	$stateProvider
+		.state('index', {
+      		url: "", // url空白的話就是根目錄就像是執行http://localhost一樣
+      		templateUrl: "partials/state1.html"
+    	});
+```
 
 
 
