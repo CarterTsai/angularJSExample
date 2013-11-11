@@ -1,0 +1,7 @@
+<div>
+    <h3>ngRepeat</h3>
+    <input placeholder="filter" ng-model="f"/>
+    <div class="repeat-item" ng-repeat="list in lists | filter:f">
+        {{list}}
+    </div>
+</div>
