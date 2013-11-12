@@ -17,18 +17,35 @@ angular.module('animationApp', [
         controller: 'MainCtrl'
       })
       .when('/view', {
-        templateUrl: 'views/view.html'
+        templateUrl: 'views/view.html',
+        controller: function($scope) {
+            $scope.viewAnimation = 'view-opacity';
+        }
       })
-      .when('/view1', {
-        templateUrl: 'views/view1.html'
+      .when('/Position', {
+        templateUrl: 'views/position.html',
+        controller: function($scope) {
+            $scope.viewAnimation = 'view-position';
+        }
       })
-      .when('/view2', {
-        templateUrl: 'views/view2.html'
+      .when('/Scale', {
+        templateUrl: 'views/scale.html',
+        controller: function($scope) {
+            $scope.viewAnimation = 'view-scale';
+        }
       })
-      .when('/view3', {
-        templateUrl: 'views/view3.html'
+      .when('/Rotation', {
+        templateUrl: 'views/rotation.html',
+        controller: function($scope) {
+            $scope.viewAnimation = 'view-rotation';
+        }
       })
-
+      .when('/Opacity', {
+        templateUrl: 'views/opacity.html',
+        controller: function($scope) {
+            $scope.viewAnimation = 'view-opacity';
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });
