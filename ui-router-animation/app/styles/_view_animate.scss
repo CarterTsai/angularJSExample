@@ -1,0 +1,80 @@
+.side-panel {
+    transition:0.5s linear all;
+    transform: rotate(-180deg);
+}
+
+.side-panel:empty {
+    transform: rotate(0deg);
+}
+
+.view-opacity-enter {
+  transition:0.5s linear all;
+}
+
+.view-opacity-leave {
+  transition:0s linear all;
+}
+
+.view-opacity-enter,
+.view-opacity-leave.leave-active {
+  opacity:0;
+}
+.view-opacity-leave,
+.view-opacity-enter.enter-active {
+  opacity:1;
+}
+
+// scale
+.view-scale.ng-enter {
+  transition:0.5s linear all;
+}
+
+.view-scale.ng-leave {
+  transition:0s linear all;
+}
+
+.view-scale.ng-enter,
+.view-scale.ng-leave.ng-leave-active {
+  transform: scale(10);
+}
+.view-scale.ng-leave,
+.view-scale.ng-enter.ng-enter-active { 
+  transform: scale(1);
+}
+
+// position
+.view-position-enter {
+  transition:0.5s linear all;
+}
+
+.view-position-leave {
+  transition:0s linear all;
+}
+
+.view-position-enter,
+.view-position-leave.leave-active {
+  transform: translate(200px, 50px);
+}
+.view-position-leave,
+.view-position-enter.enter-active { 
+  transform: translate(50px, 100px);
+}
+
+// rotation
+.view-rotation.ng-enter {
+  transition:3s linear all;
+}
+
+.view-rotation.ng-leave {
+  transition:0s linear all;
+}
+
+.view-rotation.ng-enter,
+.view-rotation.ng-leave.ng-leave-active {
+  transform: rotate(-180deg);
+}
+.view-rotation.ng-leave,
+.view-rotation.ng-enter.ng-enter-active { 
+  transform: rotate(0deg);
+}
+
